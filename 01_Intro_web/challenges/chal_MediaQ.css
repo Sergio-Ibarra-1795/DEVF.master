@@ -1,0 +1,133 @@
+body {
+    height: 100vh;
+    width: 900px;
+}
+.ContenedorFull {
+
+    border:3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    height: 90%;
+    width: 35%;
+    
+}
+
+
+.ContenedorA{
+    border:2px solid #FF6060;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 40%;
+}
+
+.Caja1A{
+    border:1px solid black;
+    background-color:#FF6060;
+    width: 35%;
+    height: 35%;
+}
+
+.Caja2A{
+    border:1px solid black;
+    background-color:#FF6060;
+    width: 35%;
+    height: 35%;
+}
+
+.ContenedorB{
+    border:2px solid #1400ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 40%;
+}
+
+.Caja1B{
+    border:1px solid black;
+    background-color:#1400ff;
+    width: 35%;
+    height: 35%;
+}
+
+
+.Caja2B{
+    border:1px solid black;
+    background-color:#1400ff;
+    width: 35%;
+    height: 35%;
+}
+
+
+@media screen and (min-width: 400px) and (max-width: 600px) {
+   
+    .ContenedorA{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+      
+    .ContenedorB{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    }
+
+
+    @media screen and (min-width: 600px) {
+   
+
+        .ContenedorFull{
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+        .ContenedorA{
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            border:2px solid #60faffd3;
+            height: 90%;
+        }
+        
+          
+        .ContenedorB{
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            border:2px solid #60faffd3;
+            height: 90%;
+        }
+
+        .Caja1A {
+            border:1px solid black;
+            background-color:#60FF66;
+        }
+
+        .Caja2A {
+            border:1px solid black;
+            background-color:#60FF66;
+        }
+
+        .Caja1B {
+            border:1px solid black;
+            background-color:black;
+        }
+
+        .Caja2B {
+            border:1px solid black;
+            background-color:black;
+        }
+
+
+    }

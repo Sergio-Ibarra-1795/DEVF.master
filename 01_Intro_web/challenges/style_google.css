@@ -1,0 +1,60 @@
+body{
+    background-color: rgba(0, 0, 0, 0.76);
+}
+div {
+    text-align:end;
+}
+
+h3 {
+    display: inline;
+    /* padding: 20px 40px 40px 20px; se indica el tamaño del margen en sentido de las manecillas del reloj emezando en el top*/
+    padding: 10px 10px;
+    /* padding interpreta 20 como top y bottom y 40 como left y right */
+    border: 2px solid gray;
+    /* border-style:ridge; */
+    background-color:rgba(245, 245, 245, 0.534);
+    color: white;
+    font-style: oblique;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-size: 10px;
+    margin: 10px;
+}
+.RightUp{
+    color:wheat;
+    /* La clase .RightUp para color no se heredó a las etiquetas a */
+}
+.CenterImg {
+    display: block;
+    text-align: center;
+    margin: 10px;
+}
+
+
+.WrapperInput {
+    display:block;
+    text-align:center;
+    /* background-color: gray; */
+    /* margin-bottom: 40px;
+    border:1px solid whitesmoke;
+    /* padding: 1px 1px; */
+    /* border-radius: 50px;
+    font-size: 2px
+    RESULTÓ MÁS ESTÉTICO, usar las propiedasdes directo
+    en la clase Input;
+   */
+} 
+
+.Input {
+    /* display: block; Se considera inline por defecto */
+    background-color: gray;
+    width: 300px;
+    margin-bottom: 40px;
+    border:1px solid whitesmoke;
+    /* padding: 1px 1px; */
+    border-radius: 50px;
+    font-size: 25px;
+}
+
+h4{
+    color: gray;
+}

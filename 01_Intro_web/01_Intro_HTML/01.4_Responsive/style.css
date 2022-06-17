@@ -1,0 +1,48 @@
+body{
+    font-size: 16px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.ContenedorMayor{
+    border:3px solid black;
+    height: 90vh;
+    /* 100vh es el 100% del alto de la pantalla */
+    width: 90vw;
+    /* 100vh es el 100% del ancho de la pantalla */
+    display: inline-block;
+
+}
+
+.Titulo{
+/* font-size 1em=1*16px */
+    font-size:3rem;
+
+}
+
+.Subtitulo{
+    font-size:2rem;
+
+}
+
+.Contenedor{
+
+    font-size: 60px;
+    width: 50%;
+    height: 50%;
+    border:3px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Parrafo{
+    font-size:2em;
+    border: 3px solid aqua;
+    width:50%;
+    height: 50%;
+
+}

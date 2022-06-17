@@ -1,0 +1,111 @@
+body {
+    margin:10px;
+    padding: 0;
+    height: 100vh;
+    /* Scroll infinito se evita definiendo altura de body */
+    background-color: #0d0c0e8f;
+    display: flex;
+    justify-content:space-around;
+    /* Para poner el componente Madre del lado derecho del Padre */
+}
+
+h2{
+    color: white;
+}
+
+.Padre{
+    height:400px;
+    width: 400px;
+    border:2px solid rgb(117, 17, 17);
+    background-color: rgb(15, 15, 53);
+    display: flex;
+    justify-content:space-between;
+    /* Mueve elementos en el eje X */
+    align-items: center;
+      /* Mueve elementos en el eje Y *
+      tiene flex end y flex start/ */
+    flex-direction:column; 
+    /* Me ayuda a organizar mis elementos en columana */
+}
+
+.hijoP1 {
+    height: 30%;
+    width: 30%;
+    /* Alto y ancho de 30% con respecto al Padre */
+    border: 2px solid #b8b80c;
+    background-color: red;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction:row; 
+}
+
+.hijoP2 {
+    height: 30%;
+    width: 30%;
+    /* Alto y ancho de 30% con respecto al Padre */
+    border: 2px solid #b8b80c;
+    background-color: red;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction:column; 
+}
+
+
+.nietoP {
+    height: 25%;
+    width: 25%;
+    border: 2px solid rgb(19, 0, 128);
+}
+
+.Madre{
+    height:400px;
+    width: 400px;
+    border:2px solid #375337bb;
+    background-color: black;
+    display: flex;
+    justify-content:space-between;
+    /* Mueve elementos en el eje X */
+    align-items: center;
+      /* Mueve elementos en el eje Y *
+      tiene flex end y flex start/ */
+    flex-direction:row; 
+    /* Me ayuda a organizar mis elementos en columana */
+}
+
+.hijoM1 {
+    height: 100px;
+    width: 100px;
+    border: 2px solid blue;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction:column; 
+}
+
+.hijoM2 {
+    height: 100px;
+    width: 100px;
+    border: 2px solid blue;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-direction:row; 
+}
+
+.Capcom {
+    height: 100px;
+    width: 100px;
+    border: 2px solid #291b378f;
+    color: white;
+    font-size: 20px;
+}
+
+.nietoM {
+    
+        height: 20px;
+        width: 20px;
+        border: 2px solid rgb(19, 0, 128);
+    
+}

@@ -1,0 +1,42 @@
+.Container {
+    border:3px solid black;
+    height: 100vh;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "hijo1 hijo2"
+    "hijo1 hijo2"
+    "hijo1 hijo3";
+    grid-gap:20px;
+    justify-items: center;
+    /* Aliena a lo largo del eje X u horixontalmente */
+    align-items: end;
+       /* Aliena a lo largo del eje Y ó verticalmente*/
+    
+
+}
+
+.Hijo{
+    background-color: aqua;
+    border: 1px solid goldenrod;
+    border-radius: 25px;
+}
+.Hijo1 {
+    grid-area: hijo1; 
+    background-color: aquamarine;
+    align-self: flex-start;
+}
+
+
+.Hijo2 {
+    grid-area: hijo2;
+    background-color: blueviolet;
+}
+
+
+.Hijo3 {
+    grid-area: hijo3;
+    background-color:brown;
+}
+

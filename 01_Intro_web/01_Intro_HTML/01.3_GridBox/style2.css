@@ -1,0 +1,49 @@
+.Container {
+    border:3px solid black;
+    height: 100vh;
+    display:grid;
+    grid-template-columns: [ver1] 1fr [ver2] 1fr [ver3];
+    grid-template-rows: [hor1] 1fr [hor2] 1fr [hor3]1fr [hor4];
+
+    /* Se definen por unos mismo las lineas verticales y horizontales */
+    grid-column-gap:20px;
+    /* Para agregar un espacio entre las columnas */
+    grid-row-gap: 20px;
+    /* Para agregar un espacio entre las filas */
+
+    
+}
+
+.Hijo{
+    background-color: aqua;
+    border: 1px solid red;
+    border-radius: 25px;
+}
+.Hijo1 {
+    grid-column: ver1/ver3;
+    grid-row: hor3/hor4;
+    background-color: aquamarine;
+}
+
+/* .Hijo2 {
+    grid-column: ver1/ver3;
+    grid-row: hor3/hor4;
+} */
+/* HTML los pones en automático abajo del container cuando no se usan */
+
+.Hijo3 {
+    grid-column: ver1/ver3;
+    grid-row: hor2/hor3;
+    background-color: blueviolet;
+}
+
+.Hijo4 {
+    grid-column: ver1/ver3;
+    grid-row: hor1/hor2;
+    background-color: brown;
+}
+
+/* .Hijo5 {
+    grid-column: ver2/ver3;
+    grid-row: hor3/hor4;
+} */

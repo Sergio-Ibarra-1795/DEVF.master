@@ -1,0 +1,211 @@
+body {
+    margin:30px;
+    padding: 0;
+    height: 150vh;
+    width: 200vh;
+    /* Scroll infinito se evita definiendo altura de body */
+    background-color: black;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+}
+h1 {
+    color: white;
+    display: block;
+    text-align: left;
+}
+
+h2 {
+    color: white;
+}
+
+ h3 {
+    color: white;
+    font-size: 20px;
+}
+
+p{
+    color:whitesmoke;
+}
+
+.Titulo{
+display: block;
+text-align: left;
+}
+
+.TresTablas{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    margin-top: 50px;
+    /* margin-top=300 se colocó para que lapágina 
+    fuera visible al momento de reducir el tamaño del 
+    navegador. Si se ajusta el height del body, ya no es necesario 
+    el valor del 300 */
+}
+
+
+.Abuelo{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+
+.Padre1{
+    height:150px;
+    width: 400px;
+    border:2px solid #02025a;
+    background-color: #02025a;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction:row; 
+    /* Me ayuda a organizar mis elementos
+     en columana ó en linea */
+    justify-content:space-between;
+    /* Mueve elementos en el eje X */
+    align-items:flex-start;
+      /* Mueve elementos en el eje Y *
+      tiene flex end y flex start/ */
+    
+}
+
+.hijo1Left {
+    height: 85%;
+    width: 25%;
+    /* Alto y ancho con respecto al Padre */
+    border: 2px solid white;
+    background-color: white;
+    display: flex;
+
+}
+
+.nieto1Left {
+    height: 90%;
+    width: 90%;
+    /* Alto y ancho con respecto al Padre */
+    border: 2px solid #ba0c2f;
+    background-color: #ba0c2f;
+   
+}
+
+
+.hijo1Right {
+    height: 85%;
+    width: 65%;
+    /* Alto y ancho de 30% con respecto al Padre */
+    border: 2px solid white;
+    background-color: white;
+    display: flex;
+    flex-direction:row; 
+    justify-content:flex-end;
+   
+}
+
+.nieto1Right {
+    height: 90%;
+    width: 95%;
+    /* Alto y ancho con respecto al Padre */
+    border: 2px solid #ba0c2f;
+    background-color: #ba0c2f;
+   
+}
+
+
+.Padre2{
+    height:150px;
+    width: 400px;
+    border:2px solid #02025a;
+    background-color: #02025a;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction:row; 
+    justify-content:space-between;
+    align-items:flex-end;
+}
+
+.hijo2Left {
+    height: 85%;
+    width: 25%;
+    /* Alto y ancho de 30% con respecto al Padre */
+    border: 2px solid white;
+    background-color: white;
+    display: flex;
+    flex-direction:column; 
+    justify-content:flex-end;
+    align-items:flex-start;
+   
+}
+
+.nieto2Left {
+    height: 90%;
+    width: 90%;
+    /* Alto y ancho con respecto al Padre */
+    border: 2px solid #ba0c2f;
+    background-color: #ba0c2f;
+   
+}
+
+
+.hijo2Right {
+    height: 85%;
+    width: 65%;
+    /* Alto y ancho de 30% con respecto al Padre */
+    border: 2px solid white;
+    background-color: white;
+    display: flex;
+    flex-direction:column; 
+    justify-content:flex-end;
+    align-items:flex-end;
+}
+
+.nieto2Right {
+    height: 90%;
+    width: 95%;
+    /* Alto y ancho con respecto al Padre */
+    border: 2px solid #ba0c2f;
+    background-color: #ba0c2f;
+   
+}
+
+.Resena{
+    height:350px;
+    width: 400px;
+    border:2px solid gray;
+    background-color: gray;
+    margin: 10px;
+    padding: 0;
+}
+
+.Inerior {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+table {
+    height:350px;
+    width: 400px;
+    color: whitesmoke;
+    margin: 10px;
+}
+
+th, td{
+    text-align: left;
+    margin: 0px;
+}
+
+caption {
+    font-size: 25px;
+    text-align: left;
+}
+
+/* To add borders and stilish the table  */
+table, th, td {
+    border:1px solid white;
+    border-collapse: collapse;
+}

@@ -1,0 +1,3 @@
+Este es el segundo archivo .txt de prueba (el primero fue incluido en la carpeta .gitignore y no será possible compormeterlo) 
+
+Cree en el GIT BASH una nueva rama a la que le llamé ramab 

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms HTML</title>
+    <link rel="stylesheet" href="./Forms.css">
+</head>
+<body>
+    
+    <input type="Text" class="TextInput">
+    <h1>Formularios de HTML</h1>
+
+
+ <label>
+        ¿Quieres una pizza?
+  
+    <input type="checkbox" valule="SI">
+    <input type="checkbox" valule="NO">
+
+ </label>
+<br>
+<br>
+
+  <label>
+    Selecciona un color
+    <input type="color">
+  </label>
+
+<br>
+<br>
+
+  <label>
+    Selecciona una fecha
+    <input type="date">
+  </label>
+
+<br>
+<br>
+
+  <label>
+    Selecciona una fecha con una previa seleccionada
+    <input type="date" value="2022-06-12" min="1920-01-01" max="Today">
+  </label>
+
+<br>
+<br>
+
+  <label>
+    Selecciona un número 
+    <input type="number" 
+    min="0"
+    max="100">
+  </label>
+
+<br>
+<br>
+
+  <label>
+    Ingresa tu password
+    <input type="password">
+  </label>
+
+
+  
+<br>
+<br>
+
+  <label>
+    <p>Ingresa tu edad </p>
+    0-30
+    <input name="age" type="radio" min="0" max="30">
+    31-40
+    <input name="age" type="radio" min="31" max="40">
+    41-50
+    <input name="age" type="radio" min="41" max="50">
+  </label>
+
+
+<br>
+<br>
+
+  <label>
+    Rango
+    <input type="range" list="porcentaje">
+  </label>
+
+
+  <datalist id="porcentaje">
+     <option value="0" label="0%">
+     <option value="25" label="25%">
+     <option value="50" label="50%">
+     <option value="75" label="75%">
+  </datalist>
+
+
+<br>
+<br>
+
+  <label>
+   Selecciona una imagen
+    <input type="file">
+  </label>
+
+<br>
+<br>
+
+  <label>
+    Buscar
+     <input type="search">
+   </label>
+
+
+<br>
+<br>
+
+<label for="sex">Genero</label>
+<select name="sex" id="sex">
+  <option value="Hombre">Hombre</option>
+  <option value="Mujer">Mujer</option>
+  <option value="Otro">Otro</option>
+</select>
+
+<br>
+<br>
+
+<textarea rows="5"
+cols="15">
+</textarea>
+
+</body>
+</html>

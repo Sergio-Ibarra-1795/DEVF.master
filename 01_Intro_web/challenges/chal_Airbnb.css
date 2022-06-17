@@ -1,0 +1,416 @@
+body {
+    width: 100vw;
+}
+
+/* This (width:100vw--> gives me the next meassures: width 1366px)
+If height is not specify in the body it will allow infine down-scroll, otherwise height can be also defined 
+as 100vh, or xxxpx */
+
+.Nav {
+    border:2px solid pink;
+    background-color: pink;
+    position:fixed;
+    /* Se utiliza index Z para que no se interponga los elementos.
+    Permite que por ejemplo la barra de navegación quede por encima */
+    top: 0;
+    z-index: 1;
+    /* Por defecto los elementos tiene un z-index cero, al indicar
+    z-index:1 queda "un nivel superior" encima de los demás elementos */
+    width: 100%;
+}
+
+
+.ContainerFull{
+    margin-top: 80px;
+    /* Para que el contenido no quede "debajo" del NAVEGADO QUE ESTÁ POSITION FIXED (barra superior) */
+    width: 95%;
+    /* This (width:95%--> gives 1366px from parent (body)*.95=1297px width)*/
+    border:3px solid green;
+}
+
+
+.Container1{
+
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    /* 1297px*.9=1167 * y *.95=1232*/
+    margin-top: 50px;
+    border: 2px solid #05013b;
+}
+
+.Container1Left{
+
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    /* 1297px*.9=1167 * y *.95=1232*/
+    margin-top: 50px;
+    border: 2px solid orange;
+}
+
+.Container1Right{
+
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    /* 1297px*.9=1167 * y *.95=1232*/
+    margin-top: 50px;
+    border: 2px solid orange;
+}
+
+
+.Container2{
+
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+       /* 1297px*.9=1167 * y *.95=1232*/
+    margin-top: 50px;
+    border: 2px solid #05013b;
+}
+
+.Container2Left{
+
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    /* 1297px*.9=1167 * y *.95=1232*/
+    margin-top: 50px;
+    border: 2px solid orange;
+}
+
+.Container2Right{
+
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    /* 1297px*.9=1167 * y *.95=1232*/
+    margin-top: 50px;
+    border: 2px solid orange;
+}
+
+
+.Container3{
+
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+       /* 1297px*.9=1167 * y *.95=1232*/
+    margin-top: 50px;
+    border: 2px solid #05013b;
+}
+
+.Container3Left{
+
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    /* 1297px*.9=1167 * y *.95=1232*/
+    margin-top: 50px;
+    border: 2px solid orange;
+}
+
+.Container3Right{
+
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    /* 1297px*.9=1167 * y *.95=1232*/
+    margin-top: 50px;
+    border: 2px solid orange;
+}
+
+
+.Container4{
+
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+       /* 1297px*.9=1167 * y *.95=1232*/
+    margin-top: 50px;
+    border: 2px solid #05013b;
+}
+
+.Container4Left{
+
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    /* 1297px*.9=1167 * y *.95=1232*/
+    margin-top: 50px;
+    border: 2px solid orange;
+}
+
+.Container4Right{
+
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    /* 1297px*.9=1167 * y *.95=1232*/
+    margin-top: 50px;
+    border: 2px solid orange;
+}
+
+
+.ImagenyDescripcion {
+    /* Se encuentra dentro de Containers 1,2,3 y 4 y es para englobar las imágenes con su descripción y precio  */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px solid aqua;
+    /* Medidas son de width 320=1232/4 (porque son en este caso 4 ImagenyDescripcion  */
+ }
+
+
+ .InfoInferior{
+     /* Se encuentra dentro de ImagenyDescripción*/
+    font-size: 90%;
+ }
+
+
+
+.ImageC1{
+
+   margin: 10px;
+   height: 90%;
+   width: 90%;
+   /* PARENT CONTAINER .ImagenyDescripcion 
+   320*.9=288 (en realidad mide 271 porque comparte espacio con .InfoInferior)*/
+   border-radius: 15%;
+   border: 2px solid violet;
+}
+
+
+.ImageC2{
+
+    margin: 10px;
+    height: 90%;
+    width: 90%;
+    border-radius: 15%;
+    border: 2px solid violet;
+ 
+ }
+
+ .ImageC3{
+
+    margin: 10px;
+    height: 90%;
+    width: 90%;
+    border-radius: 15%;
+    border: 2px solid violet;
+ 
+ }
+
+ .ImageC4{
+
+    margin: 10px;
+    height: 90%;
+    width: 90%;
+    border-radius: 15%;
+    border: 2px solid violet;
+ 
+ }
+
+
+
+ .VerMapa {
+    position:fixed;
+    /* Se utiliza index Z para que no se interponga los elementos.
+    Permite que por ejemplo la barra de navegación quede por encima */
+    bottom: 0;
+    z-index: 1;
+    /* Por defecto los elementos tiene un z-index cero, al indicar
+    z-index:1 queda "un nivel superior" encima de los demás elementos */
+    display: flex;
+    border:2px solid gray;
+    /* background-color: gray; */
+
+}
+
+h3 {
+    display: inline;
+}
+
+ @media screen and (min-width: 0px) and (max-width: 420px) {
+   /* Para hacer que de 0 hasta 420px muestre solo 1 imagen  */
+    .Container1{
+
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        /* 1297px*.9=1167 * y *.95=1232*/
+        margin-top: 50px;
+        border: 2px solid #05013b;
+    }
+
+    .Container1Left{
+
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        /* 1297px*.9=1167 * y *.95=1232*/
+        margin-top: 50px;
+        border: 2px solid #05013b;
+    }
+
+    .Container1Right{
+
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        /* 1297px*.9=1167 * y *.95=1232*/
+        margin-top: 50px;
+        border: 2px solid #05013b;
+    }
+    
+    
+    
+    .Container2{
+
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        /* 1297px*.9=1167 * y *.95=1232*/
+        margin-top: 50px;
+        border: 2px solid #05013b;
+    }
+
+    .Container2Left{
+
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        /* 1297px*.9=1167 * y *.95=1232*/
+        margin-top: 50px;
+        border: 2px solid #05013b;
+    }
+
+    .Container2Right{
+
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        /* 1297px*.9=1167 * y *.95=1232*/
+        margin-top: 50px;
+        border: 2px solid #05013b;
+    }
+
+
+    
+    .Container3{
+
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        /* 1297px*.9=1167 * y *.95=1232*/
+        margin-top: 50px;
+        border: 2px solid #05013b;
+    }
+    
+    .Container3Left{
+
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        /* 1297px*.9=1167 * y *.95=1232*/
+        margin-top: 50px;
+        border: 2px solid #05013b;
+    }
+
+    .Container3Right{
+
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        /* 1297px*.9=1167 * y *.95=1232*/
+        margin-top: 50px;
+        border: 2px solid #05013b;
+    }
+
+
+
+    .Container4{
+
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        /* 1297px*.9=1167 * y *.95=1232*/
+        margin-top: 50px;
+        border: 2px solid #05013b;
+    }
+
+    
+    .Container4Left{
+
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        /* 1297px*.9=1167 * y *.95=1232*/
+        margin-top: 50px;
+        border: 2px solid #05013b;
+    }
+
+    .Container4Right{
+
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        /* 1297px*.9=1167 * y *.95=1232*/
+        margin-top: 50px;
+        border: 2px solid #05013b;
+    }
+    
+ }
+
+ @media screen and (min-width: 421px) and (max-width: 920px) {
+    /* Para hacer que de 0 hasta 420px muestre solo 1 imagen  */
+     .Container1{
+ 
+         display: flex;
+         flex-direction: column;
+         width: 95%;
+         /* 1297px*.9=1167 * y *.95=1232*/
+         margin-top: 50px;
+         border: 2px solid #05013b;
+     }
+ 
+
+     
+     
+     
+     .Container2{
+ 
+         display: flex;
+         flex-direction: column;
+         width: 95%;
+         /* 1297px*.9=1167 * y *.95=1232*/
+         margin-top: 50px;
+         border: 2px solid #05013b;
+     }
+ 
+    
+     .Container3{
+ 
+         display: flex;
+         flex-direction: column;
+         width: 95%;
+         /* 1297px*.9=1167 * y *.95=1232*/
+         margin-top: 50px;
+         border: 2px solid #05013b;
+     }
+     
+ 
+     .Container4{
+ 
+         display: flex;
+         flex-direction: column;
+         width: 95%;
+         /* 1297px*.9=1167 * y *.95=1232*/
+         margin-top: 50px;
+         border: 2px solid #05013b;
+     }
+ 
+     
+  }

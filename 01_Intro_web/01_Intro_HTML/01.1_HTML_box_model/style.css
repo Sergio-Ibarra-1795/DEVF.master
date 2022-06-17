@@ -1,0 +1,47 @@
+body {
+    background-color: #000000f1;
+    font-size: 15px;
+}
+
+h1 {
+    color: #f5f5f5b0;
+    font-size: 40px;
+}
+
+h2 {
+    color: #5555d196;
+    font-size: 20px;
+}
+
+p {
+    color: white;
+
+}
+
+li {
+    color: white;
+}
+
+.FontArialHelv{
+    font-family:Arial, Helvetica, sans-serif
+}
+/* Selector de tipo clase empieza con punto (.) */
+
+#PapaloteconM {
+    width: 180px;
+    height: 150px;
+    /* Selector de tipo id empieza con punto (#) */
+}
+
+#FontComic {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    color:rgba(218, 165, 32, 0.884)
+}
+
+h3 {
+    display: inline-block;
+    background-color: white;
+    margin:20px;
+
+}

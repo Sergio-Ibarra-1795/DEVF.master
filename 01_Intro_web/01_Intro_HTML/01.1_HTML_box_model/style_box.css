@@ -1,0 +1,31 @@
+h2 {
+    display: inline-block;
+    /* padding: 20px 40px 40px 20px; se indica el tamaño del margen en sentido de las manecillas del reloj emezando en el top*/
+    padding: 20px 40px;
+    /* padding interpreta 20 como top y bottom y 40 como left y right */
+    border: 10px ridge #c300ffc7;
+    /* border-style:ridge; */
+    background-color:black;
+    color: white;
+    font-style: oblique;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-size: 10px;
+    margin: 20px;    
+}
+
+
+h3 {
+    display: inline-block;
+    /* padding: 20px 40px 40px 20px; se indica el tamaño del margen en sentido de las manecillas del reloj emezando en el top*/
+    padding: 20px 40px;
+    /* padding interpreta 20 como top y bottom y 40 como left y right */
+    border: 10px ridge #c300ffc7;
+    /* border-style:ridge; */
+    background-color:#000000bd;
+    color: white;
+    font-style: oblique;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-size: 10px;
+    margin: -20px;
+    
+}

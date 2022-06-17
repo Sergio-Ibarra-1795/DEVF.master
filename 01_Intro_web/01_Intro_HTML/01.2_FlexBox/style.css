@@ -1,0 +1,26 @@
+.noFlex{
+    height: 50px;
+    width: 50px;
+    border: 2px solid black;
+    margin-left: 300px;
+}
+
+.padre{
+    height:400px;
+    border:2px solid red;
+    display: flex;
+    justify-content:center;
+    /* Mueve elementos en el eje X */
+    align-items: center;
+      /* Mueve elementos en el eje Y *
+      tiene flex end y flex start/ */
+    flex-direction:row; 
+    /* Me ayuda a organizar mis elementos en columana */
+}
+
+
+.hijo{
+    height: 100px;
+    width: 100px;
+    border: 2px solid green;
+}
