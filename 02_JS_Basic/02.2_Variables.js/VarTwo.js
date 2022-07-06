@@ -38,3 +38,10 @@ var valorC = 8;
 var valorD = 9;
 var resultCD = valorC + valorD; 
 console.log(resultCD);
+
+console.log(4+4)
+console.log(4-4)
+console.log(4*4)
+console.log(4/4)
+console.log(4**4)
+console.log(21%5)
