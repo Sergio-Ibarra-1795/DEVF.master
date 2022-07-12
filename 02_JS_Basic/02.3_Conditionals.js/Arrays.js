@@ -55,10 +55,29 @@ var two = "JAN	340	360	417";
 var manipulado2 = two.split(' ');
 console.log(manipulado2);
 
+//Splice to remive and add elements from an array in JS 
+
+//To delete items
+var mas_verduras = ['aguacate','tomate','papa','zanahoria','lechuga']
+console.log(mas_verduras)
+mas_verduras.splice(2,1)
+console.log(mas_verduras)
 
 
+//Split to deal with strings
+mas_verduras.splice(1,0, 'agregada1','agregada2')
+console.log(mas_verduras)
+
+let mas_verduras2 = mas_verduras.toString()
+console.log(typeof(mas_verduras2))
+mas_verduras2.split("",5)
+console.log(mas_verduras2)
 
 
+// Fecha gringa
+var fechaGringa ='2022-12-30'
+var fechaMexa = fechaGringa.split("-").reverse().join('-')
+console.log(fechaMexa)
 
 
 
