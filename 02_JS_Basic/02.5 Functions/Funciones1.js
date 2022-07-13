@@ -36,5 +36,5 @@ document.write(mensaje(10,12));
 
 
 
-//SCOPE (VAR, LET & CONS)
+
 

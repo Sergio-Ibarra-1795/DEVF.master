@@ -6,7 +6,7 @@ preparación. Por último imprimir en pantalla la lista de ingrdientes*/
 /*
 var separado; 
 var num_ingredients = Number(prompt('Cuantos ingredientes tendrá tu platillo'));
-var ingredients = []; //Array para guardar los indrdientes 
+var ingredients = []; //Array para guardar los ingredientes 
 var contador; 
 
 
