@@ -15,6 +15,8 @@ var promedio_total;// Inicializamos la variable donde se guardará el promedio t
 var contador_estudiantes;
 var inicio = 0;
 var fin = inicio+cantidad_notas; 
+var temporal1; 
+
  
 
 for(i=0;i<cantidad_estudiantes;i++){  //Desde cero hasta el número total de estudiantes
@@ -24,31 +26,28 @@ for(i=0;i<cantidad_estudiantes;i++){  //Desde cero hasta el número total de est
     
         notas_separadas = prompt(`Indica la ${j+1} nota del estudiante:`) // va solicitando las notas de cada estudiante
         notas_por_estudiante_iesimo.push(notas_separadas);
-        //document.write(`${notas_por_estudiante_iesimo} <br>`);
-        //notas_por_estudiante.push(notas_separadas);// va guardando las notas de cada estudiante
-       // document.write(`${notas_por_estudiante} <br>`); //Cada vuelta en j imprime lo que lleva en ese momento en el push, por lo tanto imprimirá el total de veces que se haga este ciclo 
-        //suma_notas_por_estudiante +=notas_separadas; //Para ir sumando las notas de cada estudiante
-        //document.write(suma_notas_por_estudiante);
 
     }
 
     notas_por_estudiante = notas_por_estudiante_iesimo.slice(inicio,fin);
     document.write(`${inicio} <br>`)
     document.write(`${fin} <br>`)
-    document.write(`${notas_por_estudiante} <br>`);
+    document.write(`${notas_por_estudiante} <br>`); 
+    document.write(`${notas_por_estudiante[0]} <br>`); 
+    document.write(`<br>`); 
 
-    function sumArray(array){
-        let sum=0;
-        for(k=0;k<array.length;k++){
-            sum +=array[k]
-            return sum ;
-        }
-    } 
-    suma_notas_por_estudiante = sumArray(notas_por_estudiante);
-    document.write(`${suma_notas_por_estudiante} <br>`)
+    temporal1 = Array.from(notas_por_estudiante);
+    console.log(`${temporal1}`); 
+
+    var suma_notas_por_estudiante = temporal1.reduce(function (sum, currentValue) {
+        return sum + currentValue
+      }, 0 //0 is the initial value
+      ) 
+      document.write(suma_notas_por_estudiante); 
+
 
     inicio +=cantidad_notas; //DEBESER HASTA CANTIDAD DE NOTAS!!! 
     fin = inicio +cantidad_notas; //DEBÍ DE INCREMENTAR TAMBIÉN EL FIN PARA QUE NO SALIERA VACÍO EL OTRO notas_por_estudiante
     
-
+    
 }
