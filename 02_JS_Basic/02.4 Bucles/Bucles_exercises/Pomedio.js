@@ -1,53 +1,52 @@
-/*Ejercicio 3 Solicitar a un docente que indique la
- cantidad de estudiantes que tiene en su grupo, 
- luego solicitar la cantidad de notas de cada estudiante 
- y calcular el promedio de cada estudiante y el 
- promedio del grupo, imprimirlos en pantalla*/
-
-var cantidad_estudiantes = Number(prompt('Cuantos estudiantes tienes en tu grupo:')); //Para que el docente ingrese el número de estudiantes en el grupo
-var cantidad_notas = Number(prompt('Cuantas notas promediará cada estudiante:'));//Para que el docente ingrese el número NOTAS POR estudiante
-var notas_separadas; //Inicializamos variable para guardar cada nota de cada estudiante
-var notas_por_estudiante=[]; //Inicializamos el array para guardar las notas de cada estiante
-var notas_por_estudiante_iesimo =[];
-var suma_notas_por_estudiante; // Inicializamos la variable donde se guardará la suma de las notas para CADA estudiante
-var promedio_notas_por_estudiante;// Inicializamos la variable donde se guardará el promedio de las notas para CADA estudiante
-var promedio_total;// Inicializamos la variable donde se guardará el promedio total de TODOS los estudiantes del grupo 
-var contador_estudiantes;
-var inicio = 0;
-var fin = inicio+cantidad_notas; 
-var temporal1; 
-
+/*Calcula el promedio de un grupo de n alumnos que tomó m materias, así como el promedio de cada alumno*/
  
+ var cantidad_estudiantes = Number(prompt('Cuantos estudiantes tienes en tu grupo:')); //Para que el docente ingrese el número de estudiantes en el grupo
+ var cantidad_notas = Number(prompt('Cuantas notas promediará cada estudiante:'));//Para que el docente ingrese el número NOTAS POR estudiante
+ var nombre_estudiante_iesiemo;
+ var notas_separadas; //Inicializamos variable para guardar cada nota de cada estudiante
+ var notas_total=[]; //Inicializamos el array para guardar las notas de cada estiante
+ var notas_por_estudiante_iesimo =[];
+ var suma_notas_por_estudiante; // Inicializamos la variable donde se guardará la suma de las notas para CADA estudiante
+ var promedio_notas_por_estudiante;// Inicializamos la variable donde se guardará el promedio de las notas para CADA estudiante en cada vuelta 
+ var promedios_total_estudiantes=[]; // Inicializamos la variable donde se guardarán los promedios de TODOS del grupo 
+ var suma_promedios_total; //// Inicializamos la variable donde se guardará la suma total de TODOS los promedios de los estudiantes del grupo 
+ var promedio_total;// Inicializamos la variable donde se guardará el promedio total de TODOS los estudiantes del grupo 
+ var inicio = 0;
+ var fin = inicio+cantidad_notas; 
 
-for(i=0;i<cantidad_estudiantes;i++){  //Desde cero hasta el número total de estudiantes
-    contador_estudiantes = i;
+ document.write(`El promedio de cada alumno es: <br>`); 
+ for(i=0;i<cantidad_estudiantes;i++){ 
+    nombre_estudiante_iesiemo = prompt(`Indica el nombre del estudiante ${i+1}`); //Va pidiendo el nombre de cada estudiante  //Desde cero hasta el número total de estudiantes
+
+     for(j=0;j<cantidad_notas;j++){ //Se inicia un ciclo dentro de otro, para que por cada estudiante cuente sus notas por separado
+
+        notas_separadas = Number(prompt(`Indica la ${j+1} nota del estudiante ${nombre_estudiante_iesiemo}:`)) // va solicitando las notas de cada estudiante
+        notas_total.push(notas_separadas);//Forma un array con las notas de todos los estudiantes 
+ 
+     }
+       
+    notas_por_estudiante_iesimo = notas_total.slice(inicio,fin);//Para ir tomando las notas_por_estudiante, haciendo slice del notas_total tomando solo las notas de cada estudiante    
+    suma_notas_por_estudiante = notas_por_estudiante_iesimo.reduce(function (sum, currentValue) {
+         return sum + currentValue
+       }, 0 //0 is the initial value
+       )   
     
-    for(j=0;j<cantidad_notas;j++){ //Se inicia un ciclo dentro de otro, para que por cada estudiante cuente sus notas por separado
+    promedio_notas_por_estudiante = (suma_notas_por_estudiante)/(cantidad_notas)
+       document.write(`${i+1}. Promedio estudiante ${nombre_estudiante_iesiemo} es: ${promedio_notas_por_estudiante}<br>`); 
+    promedios_total_estudiantes.push(promedio_notas_por_estudiante)//Para ir guardando el promedio de cada estudiasnte, en cada vuelta  
     
-        notas_separadas = prompt(`Indica la ${j+1} nota del estudiante:`) // va solicitando las notas de cada estudiante
-        notas_por_estudiante_iesimo.push(notas_separadas);
+    inicio +=cantidad_notas; //DEBESER HASTA CANTIDAD DE NOTAS!, para que cada iteración inicie en un "nuevo array" 
+    fin = inicio +cantidad_notas; //De esa manera es como sumarle al inicio, otravez la cantidad de notas por estudiante y "Separar" cada estudiante en un array diferente con el slice que se hace
+ }
 
-    }
-
-    notas_por_estudiante = notas_por_estudiante_iesimo.slice(inicio,fin);
-    document.write(`${inicio} <br>`)
-    document.write(`${fin} <br>`)
-    document.write(`${notas_por_estudiante} <br>`); 
-    document.write(`${notas_por_estudiante[0]} <br>`); 
+ suma_promedios_total = promedios_total_estudiantes.reduce(function (sum, currentValue) {
+    return sum + currentValue
+  }, 0 //0 is the initial value
+  ) 
+ promedio_total = (suma_promedios_total)/(cantidad_estudiantes)
     document.write(`<br>`); 
-
-    temporal1 = Array.from(notas_por_estudiante);
-    console.log(`${temporal1}`); 
-
-    var suma_notas_por_estudiante = temporal1.reduce(function (sum, currentValue) {
-        return sum + currentValue
-      }, 0 //0 is the initial value
-      ) 
-      document.write(suma_notas_por_estudiante); 
-
-
-    inicio +=cantidad_notas; //DEBESER HASTA CANTIDAD DE NOTAS!!! 
-    fin = inicio +cantidad_notas; //DEBÍ DE INCREMENTAR TAMBIÉN EL FIN PARA QUE NO SALIERA VACÍO EL OTRO notas_por_estudiante
+    document.write(`El promedio del grupo es: ${promedio_total}<br>`); 
     
-    
-}
+
+
+
