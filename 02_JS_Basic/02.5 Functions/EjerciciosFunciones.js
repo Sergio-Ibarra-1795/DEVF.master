@@ -43,28 +43,4 @@ if (evalador ==true){
 }
 
 
-/*3. Realiza un juego de piedra, papel o tijera, 
-en el cual el usuario ingrese su
-nombre y la opción que quiera*/
-
-
-//Declaración de variables
-     //let nombre = prompt('Ingresa tu nombre:');
-     //let opcion = prompt('Ingresa tu opción (piedra, papel o tijera):');
-let piedra,papel,tijera ;
-
-for(i=0;i<2;i++){
-    let participante_i =[];
-    let nombre = prompt('Ingresa tu nombre:');
-    participante_i.push(nombre);
-    //document.write(`${participante_i}<br>`);
-    let opcion = prompt('Ingresa tu opción (piedra, papel o tijera):');
-    participante_i.push(opcion);
-    document.write(`${participante_i}<br>`);
-    
-}
-
-
-
-
 

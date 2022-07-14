@@ -1,46 +1,92 @@
-/*Ejercicio 3 Solicitar a un docente que indique la
- cantidad de estudiantes que tiene en su grupo, 
- luego solicitar la cantidad de notas de cada estudiante 
- y calcular el promedio de cada estudiante y el 
- promedio del grupo, imprimirlos en pantalla*/
+/*Crear una aplicacion que permita a un profesor, indicar cuantos alumnos tiene en su materia y cuantas
+notas recogio para cada estudiante y calcular el promedio individual y grupal.*/
 
+//variables globales
+let cantidadAlumnos, cantidadNotas, promedioGrupal;
+let datosGrupo = [];
 
- // Variables globales 
+//solicitamos los datos
+cantidadAlumnos = Number(prompt('Ingresa la cantidad de alumnos en tu grupo'));
+cantidadNotas = Number(prompt('Ingresa la cantidad de notas a promediar por alumno'));
 
- let CantidadAlumnos; CantidadNotas; 
+//Funcion que realiza la solicitud de datos al usuario para cada alumno
+function SolicitarAlumnos(){
+    //variables
+    let grupo = [];
 
- //Solicitamos los datos 
-
-CantidadAlumnos = Number(prompt('Ingresa cantidad de alumnos')); 
-CantidadNotas = Number(prompt('Ingresa cantidad de notas a promediar por alumno'));
-
-function SolicitarAlumnos (){//Los parametros en la funcion no necesariamente deben estar declaradas pues son las variables globales
-    //variables para la función 
-    let grupo =[]; //Para ir guardando los datos de todos los estudiantes
-    
-    //Iteramos para solicitar los datos por alumno
-    for(i=1;i<=CantidadAlumnos;i++){
-        //variables que se "vuelven a declarar" por cada vuelta de este ciclo for
+    //iteramos para solicitar los datos por alumno
+    for(let i=1; i<=cantidadAlumnos; i++){
+        //variables
         let alumno = [];
-        let nombre = prompt(`Ingresa el número del alumno ${i}`); //Cada nombre se debe ir almacenando en alguna parte
-        
-        //guardar datos del alumno
+        let nombre = prompt(`Ingresa el nombre del alumno ${i}`);
+
+        //guardo datos del alumno
         alumno.push(nombre);
         alumno.push(SolicitarNotas(nombre));
 
         grupo.push(alumno);
-
     }
 
     function SolicitarNotas(nombre){
         //variables
-        let notas =[];
-        for(let j=1;j<=CantidadNotas;j++){
-        let nota = prompt(`Ingresa la nota ${j} del estudiante ${nombre}`)
-        notas.push(nota);}
-    } return notas;
+        let notas = [];
 
+        for(let j=1; j<=cantidadNotas; j++){
+            let nota = Number(prompt(`Ingresa la nota ${j} del estudiante ${nombre}`))
 
-} return grupo;
+            notas.push(nota);
+        }
+        
+        return notas;
+    }
 
-console.log(SolicitarAlumnos);
+    return grupo;
+}
+
+datosGrupo = SolicitarAlumnos();
+
+//Funcion que realiza el promedio indivudual y grupal
+function Promedio(){
+    let sumaGrupal = 0;
+    let grupoTexto = "";
+    let alumno, nombre, notas, promedio;
+
+    //iteramos el array de datos grupo
+    for(let i=0; i<datosGrupo.length; i++){
+        alumno = datosGrupo[i];
+
+        nombre = alumno[0];
+        notas = alumno[1];        
+
+        //calculamos el promedio individual
+        promedio = SumaNotas(notas) / cantidadNotas;
+
+        //concatenamos texto
+        grupoTexto += Concatenar(nombre, i + 1, promedio);
+
+        sumaGrupal += promedio;
+    }
+
+    promedioGrupal = sumaGrupal / cantidadAlumnos;
+
+    return grupoTexto;
+}
+
+//Funcion que realiza la sumatoria de notas dentro de un array
+function SumaNotas(notas){
+    let suma = 0;
+
+    for(let n=0; n < notas.length; n++){
+        suma += notas[n];
+    }
+
+    return suma;
+}
+
+//Funcion que realiza la concatenacion del texto de cada alumno
+function Concatenar(nombre, posicion, promedio){
+    return `${posicion}. Nombre: ${nombre} - Promedio: ${promedio} <br>`
+}
+
+//imprimimos el resultado
+document.write(`Promedios Grupo <br><br> ${Promedio()} <br><br> Promedio Grupal: ${promedioGrupal}`);
