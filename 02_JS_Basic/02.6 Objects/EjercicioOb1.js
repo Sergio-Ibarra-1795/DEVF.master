@@ -15,7 +15,7 @@ let arregloAlumnos =[];
 for (let i=1; i<=3; i++){
     let nombre = prompt(`Ingresa el nombre del alumno ${i}`);
     let promedio = prompt(`Ingresa el promedio del alumno ${i}`);
-    let alumno = new Alumnos(nombre,promedio); //crea la copia de la clase para que ALUM,NO ya sea un objeto, que tiene porpiedades y estrcutura de la clase alumno  
+    let alumno = new Alumnos(nombre,promedio); //crea la copia de la clase para que ALUMNO ya sea un objeto, que tiene porpiedades y estrcutura de la clase alumnos 
     arregloAlumnos.push(alumno);
     
 }
