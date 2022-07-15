@@ -15,6 +15,7 @@ let productos = [];
 let precios_base = [];
 let prueba = [];
 
+
 productos_con_precios_base = Object.entries(productos_precio_base);
 productos = Object.keys(productos_precio_base);//Forma un array con los keys del diccionario en cuestion
 precios_base = Object.values(productos_precio_base);//Forma un array con los values del diccionario en cuestion
@@ -55,27 +56,28 @@ function Descuento (){
    
     if(userChoice==='10'){
         escalar =0.1;
-        precios_con_descuento = precios_base.map(x=>x *(1-escalar)); //Precioas base es un array, que se está multiplicando por un escalar
+        return precios_base.map(x=>x *(1-escalar)); //Precioas base es un array, que se está multiplicando por un escalar. [Una especie de vector por un escalar alfa]
     } else if (userChoice==='15'){
         escalar = 0.15;
-        precios_con_descuento = precios_base.map(x=>x *(1-escalar)); //Precioas base es un array, que se está multiplicando por un escalar
+        return precios_base.map(x=>x *(1-escalar)); //Precioas base es un array, que se está multiplicando por un escalar
     } else if (userChoice==='20'){
         escalar = 0.2;
-        precios_con_descuento = precios_base.map(x=>x *(1-escalar));;
+        return precios_base.map(x=>x *(1-escalar));
+    
     }
-    resultDisplay.innerHTML = precios_con_descuento; //Para que el resultado de la función se muestre en el objeto Resultdisplay en le HTML (es un array, con los precios, dependiendo el descuento solicitado)
+    
 }
+let precios = Descuento();
+console.log(precios);
+// resultDisplay.innerHTML = precios_con_descuento; //Para que el resultado de la función se muestre en el objeto Resultdisplay en le HTML (es un array, con los precios, dependiendo el descuento solicitado)
+// document.write(`<br>`);
+// document.write(precios);
+// document.write(`Los precios con el descuento seleccionado son: ${precios_con_descuento.join(', ')} <br>`);
+// document.write(`<br>`);
 
-console.log(precios_con_descuento);
-precios_con_descuento_display= Descuento();
-console.log(precios_con_descuento_display);
-document.write(`<br>`);
-document.write(`Los precios con el descuento seleccionado son: ${precios_con_descuento_display} <br>`);
-document.write(`<br>`);
-
-//Imprime los precios con descuento de cada producto 
-document.write(`<b>Precio con descuento de productos (conforme al % seleccionado):<br> </b>`);
-document.write(`- El precio base del  ${productos[0]} es: $${precios_con_descuento_display[0]}<br>`);
-document.write(`- El precio base del  ${productos[1]} es: $${precios_con_descuento_display[1]}<br>`);
-document.write(`- El precio base del  ${productos[2]} es: $${precios_con_descuento_display[2]}<br>`);
-document.write(`- El precio base del  ${productos[3]} es: $${precios_con_descuento_display[3]}<br>`);
+// //Imprime los precios con descuento de cada producto 
+// document.write(`<b>Precio con descuento de productos (conforme al % seleccionado):<br> </b>`);
+// document.write(`- El precio base del  ${productos[0]} es: $${precios_con_descuento[0]}<br>`);
+// document.write(`- El precio base del  ${productos[1]} es: $${precios_con_descuento[1]}<br>`);
+// document.write(`- El precio base del  ${productos[2]} es: $${precios_con_descuento[2]}<br>`);
+// document.write(`- El precio base del  ${productos[3]} es: $${precios_con_descuento[3]}<br>`);
