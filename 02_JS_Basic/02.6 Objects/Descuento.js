@@ -1,6 +1,5 @@
-//Diseñar un algoritmo que permita aplicar un descuento en el supermercad
-//de tal forma que se visualice el producto con el precio original y con el descuento. 
-
+/*Diseñar un algoritmo que permita aplicar un descuento en el supermercad
+de tal forma que se visualice el producto con el precio original y con el descuento. */
 
 //Se inicializa objeto donde vivirán los productos y sus precios base
 let productos_precio_base = {
@@ -25,8 +24,9 @@ console.log(productos_con_precios_base);//Solo para verificar que se esté forma
 const userChoiceDisplay = document.getElementById('user-choice');
 const descuentoAelegir = document.querySelectorAll('button');
 let userChoice;
+let escalar;
 let precios_con_descuento = [];
-let precios_con_descuento_display; 
+let precios_con_descuento_display =[]; 
 let resultDisplay = document.getElementById('result');
 
 //Para asignar la elección del usuario cuando preciona el boton a la variable descuentoAelegir
@@ -36,8 +36,8 @@ descuentoAelegir.forEach(descuentoAelegir => descuentoAelegir.addEventListener('
   Descuento()
 }))
 
-document.write(`${precios_base}`);
-document.write(`<br>`);
+console.log(`${precios_base}`); //Para revisar internamente que se esté creando el array precios_base 
+
 //Imprime los precios base de cada producto 
 document.write(`<b>Precio base de productos (sin descuento):<br> </b>`);
 document.write(`- El precio base del  ${productos[0]} es: $${precios_base[0]}<br>`);
@@ -54,25 +54,28 @@ document.write(`<br>`);
 function Descuento (){
    
     if(userChoice==='10'){
-        precios_con_descuento = precios_base *(.9); //Precioas base es un array, que se está multiplicando por un escalar
+        escalar =0.1;
+        precios_con_descuento = precios_base.map(x=>x *(1-escalar)); //Precioas base es un array, que se está multiplicando por un escalar
     } else if (userChoice==='15'){
-        precios_con_descuento = precios_base *(.85); //Precioas base es un array, que se está multiplicando por un escalar
+        escalar = 0.15;
+        precios_con_descuento = precios_base.map(x=>x *(1-escalar)); //Precioas base es un array, que se está multiplicando por un escalar
     } else if (userChoice==='20'){
-        precios_con_descuento = precios_base*(.8);
+        escalar = 0.2;
+        precios_con_descuento = precios_base.map(x=>x *(1-escalar));;
     }
-    resultDisplay.innerHTML = precios_con_descuento;
+    resultDisplay.innerHTML = precios_con_descuento; //Para que el resultado de la función se muestre en el objeto Resultdisplay en le HTML (es un array, con los precios, dependiendo el descuento solicitado)
 }
 
-precios_con_descuento_display=precios_con_descuento;
-console.log(typeof(({precios_con_descuento_display})));
-document.write(precios_base);
+console.log(precios_con_descuento);
+precios_con_descuento_display= Descuento();
+console.log(precios_con_descuento_display);
 document.write(`<br>`);
-prueba = precios_base *3; 
-document.write(prueba);
-
 document.write(`Los precios con el descuento seleccionado son: ${precios_con_descuento_display} <br>`);
+document.write(`<br>`);
 
-/*
-document.write(productos_precio_base.refrigerador);
-document.write(`<br>`);*/
-
+//Imprime los precios con descuento de cada producto 
+document.write(`<b>Precio con descuento de productos (conforme al % seleccionado):<br> </b>`);
+document.write(`- El precio base del  ${productos[0]} es: $${precios_con_descuento_display[0]}<br>`);
+document.write(`- El precio base del  ${productos[1]} es: $${precios_con_descuento_display[1]}<br>`);
+document.write(`- El precio base del  ${productos[2]} es: $${precios_con_descuento_display[2]}<br>`);
+document.write(`- El precio base del  ${productos[3]} es: $${precios_con_descuento_display[3]}<br>`);
