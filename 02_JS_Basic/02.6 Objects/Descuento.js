@@ -13,7 +13,7 @@ let productos_precio_base = {
 let productos_con_precios_base = [];
 let productos = [];
 let precios_base = [];
-let prueba = [];
+let precios = [];
 
 
 productos_con_precios_base = Object.entries(productos_precio_base);
@@ -30,12 +30,6 @@ let precios_con_descuento = [];
 let precios_con_descuento_display =[]; 
 let resultDisplay = document.getElementById('result');
 
-//Para asignar la elección del usuario cuando preciona el boton a la variable descuentoAelegir
-descuentoAelegir.forEach(descuentoAelegir => descuentoAelegir.addEventListener('click', (e) => {
-  userChoice = e.target.id //Asigna a variable userChoise. el boton que presionó el usuario
-  userChoiceDisplay.innerHTML = userChoice //Asigna internamente el resultado del click del usuario a la variable UserChoice
-  Descuento()
-}))
 
 console.log(`${precios_base}`); //Para revisar internamente que se esté creando el array precios_base 
 
@@ -52,29 +46,31 @@ document.write(`<br>`);
 document.write(`<b> Precios con el descuento seleccionado:<br> </b>`);
 document.write(`<br>`);
 
-function Descuento (){
-   
-    if(userChoice==='10'){
-        escalar =0.1;
-        return precios_base.map(x=>x *(1-escalar)); //Precioas base es un array, que se está multiplicando por un escalar. [Una especie de vector por un escalar alfa]
-    } else if (userChoice==='15'){
-        escalar = 0.15;
-        return precios_base.map(x=>x *(1-escalar)); //Precioas base es un array, que se está multiplicando por un escalar
-    } else if (userChoice==='20'){
-        escalar = 0.2;
-        return precios_base.map(x=>x *(1-escalar));
-    
-    }
-    
+do {
+    precios  = Descuento();
+    console.log(precios)
+} while (precios_base.length <5){
+    precios  = Descuento();
+    console.log(precios)
 }
-let precios = Descuento();
+
+
+resultDisplay.innerHTML = precios_con_descuento; //Para que el resultado de la función se muestre en el objeto Resultdisplay en le HTML (es un array, con los precios, dependiendo el descuento solicitado)
+precios = Descuento();
 console.log(precios);
-// resultDisplay.innerHTML = precios_con_descuento; //Para que el resultado de la función se muestre en el objeto Resultdisplay en le HTML (es un array, con los precios, dependiendo el descuento solicitado)
+console.log(typeof(precios));
 // document.write(`<br>`);
 // document.write(precios);
 // document.write(`Los precios con el descuento seleccionado son: ${precios_con_descuento.join(', ')} <br>`);
 // document.write(`<br>`);
 
+//Para asignar la elección del usuario cuando preciona el boton a la variable descuentoAelegir
+descuentoAelegir.forEach(descuentoAelegir => descuentoAelegir.addEventListener('click', (e) => {
+    userChoice = e.target.id //Asigna a variable userChoise. el boton que presionó el usuario
+    userChoiceDisplay.innerHTML = userChoice //Asigna internamente el resultado del click del usuario a la variable UserChoice
+  }))
+
+  
 // //Imprime los precios con descuento de cada producto 
 // document.write(`<b>Precio con descuento de productos (conforme al % seleccionado):<br> </b>`);
 // document.write(`- El precio base del  ${productos[0]} es: $${precios_con_descuento[0]}<br>`);
