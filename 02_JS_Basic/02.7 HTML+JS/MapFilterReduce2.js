@@ -75,17 +75,41 @@ const products = [
 ]
 
 
+//función para crear IDs 
+const obtenerUUID = () => ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+(c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));
+
+
 //Función para añadir un usuario nuevo (objetos con todas las propuedades) al array de usuarios
-function Registro (){
+function Registro (username,email,password){
     let nuevoUsuario =  { _id: '',
-    username: '',
-    email: '',
-    password: '',
+    username: username,
+    email: email,
+    password: password,
     createdAt:'',
     isLoggedIn: false }
     
-    return users.push(nuevoUsuario);
+    users.push(nuevoUsuario);
+    return nuevoUsuario;
+
 }
 
-const users2 = Registro();
-console.log(users2);
+
+console.log(Registro('S', 's@','1234'));
+console.log(users);
+
+
+// Función llamada ingresar que permita al usuario iniciar sesión en la aplicación
+
+const ingresar = function ingresar(userId,password){
+    for(i=0; i<users.length;i++){
+         if (username ===users[i].username && password===users[i].password) {
+         document.write('You are logging in')}
+        
+         else if (username !==users[i].username && password!==users[i].password){
+            document.write('USER DOES NOT EXIST') }
+    }
+ }
+ 
+
+    
