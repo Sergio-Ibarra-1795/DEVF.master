@@ -1,5 +1,4 @@
 // inmutabilidad
-// spread o rest operator
 
 const arrayOriginal = [
   {},
@@ -10,10 +9,14 @@ const arrayOriginal = [
 
 Object.freeze(arrayOriginal);
 
+//Para hacer un clo/copia de un objeto/array (NO FUNCIONA s adentro hay otros objetos)
 const copiaDelArrayOrigial = [...arrayOriginal];
-// metodos mutan el array original
+// spread o rest operator
 
-// push, pop, unshift, shift, splice
+/* metodos mutan el array original
+ push, pop, unshift, shift, splice*/
+
+
 const miObjeto = {};
 
 Object.freeze(miObjeto)
