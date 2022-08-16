@@ -1,6 +1,5 @@
 
-/*2.- Crear la clase construcción que hereda a otras dos 
-clases "casa" y "edificio". 
+/*2.- Crear la clase construcción que hereda a otras dos  clases "casa" y "edificio". 
 a. Sus atributos son: numPuertas, numVentanas, numPisos,
    direccion, altura, largo y ancho del terreno.
 b. Cada uno tiene un método que regresa los metros 

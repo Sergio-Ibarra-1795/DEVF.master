@@ -1,9 +1,6 @@
-/*5.- Crea una subclase de Electrodomestico llamada Lavadora 
-    con las siguientes características:
-    a. Su atributo es carga(kg de ropa), además de los 
-       atributos heredados.
-    b. Crea el método precioFinal(). Este se calcula
-       multiplicando el consumoEnergetico por la carga.*/
+/*5.- Crea una subclase de Electrodomestico llamada Lavadora con las siguientes características:
+    a. Su atributo es carga(kg de ropa), además de los atributos heredados.
+    b. Crea el método precioFinal(). Este se calcula  multiplicando el consumoEnergetico por la carga.*/
 
        
 class Electrodomestico {
@@ -32,7 +29,7 @@ class Lavadora extends Electrodomestico {
 
 let Lava1 = new Lavadora (10000, 'gris', '14kg', 15)
 
-console.log(casa_interes)
+console.log(Lava1)
 
 
 

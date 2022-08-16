@@ -1,9 +1,6 @@
-/*4.- Crea una superclase llamada Electrodoméstico con las 
-    siguientes características:
-    a. Sus atributos son precio, color, consumoEnergetico
-       y capacidad (peso máximo)
-    b. El constructor solo debe pedir precio, color 
-       y capacidad. 
+/*4.- Crea una superclase llamada Electrodoméstico con las siguientes características:
+    a. Sus atributos son precio, color, consumoEnergetico y capacidad (peso máximo)
+    b. El constructor solo debe pedir precio, color  y capacidad. 
     c. consumoEnergetico debe iniciar con valor de 100*/
 
 class Electrodomestico {
