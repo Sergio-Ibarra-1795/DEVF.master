@@ -11,12 +11,12 @@ class Maestro {
         this.promedio
       }
 
-      CalcularPromedio(calificaciones){ //Método para calcular promedio
+      CalcularPromedio(){ //Método para calcular promedio
          let suma_calificaciones = 0
-         for (let i=0; i<=calificaciones.lenght;i++ ){
-               suma_calificaciones += calificaciones[i];               
+         for (let i=0; i<this.calificaciones.length;i++ ){
+               suma_calificaciones += this.calificaciones[i];               
         }
-        this.promedio = (suma_calificaciones) / (calificaciones.lenght)
+        this.promedio = (suma_calificaciones) / (this.calificaciones.length)
    }
 }
 
@@ -29,9 +29,20 @@ class Maestro_musica extends Maestro {
 
 
 let Maestro_musica_uno = new Maestro_musica (40, [10,9,8,7,6])
-Maestro_musica_uno.CalcularPromedio([10,9,8,7,6])
+Maestro_musica_uno.CalcularPromedio()
 console.log(Maestro_musica_uno)
 
+
+class Maestro_fisica extends Maestro {
+  constructor (antigüedad, calificaciones){
+      super (antigüedad, calificaciones)
+  }
+} 
+
+
+let Maestro_fisica_uno = new Maestro_fisica (40, [10,9,8,7,6])
+Maestro_musica_uno.CalcularPromedio()
+console.log(Maestro_musica_uno)
 
 
 
