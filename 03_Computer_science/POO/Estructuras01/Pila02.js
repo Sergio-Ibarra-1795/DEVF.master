@@ -57,5 +57,7 @@ let reemplazar= function (stack,nuevo, viejo) {
     return stack
 }
 
+console.log(stack02);
+
 console.log(reemplazar(stack02,4,1));
 

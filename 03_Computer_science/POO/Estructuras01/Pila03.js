@@ -42,11 +42,13 @@ stack03.push("El acuario")
 stack03.push("Meta")
 
 stack03.print();
+stack03.size();
+
 
 let camino = function(stack){
     let new_camino = new Stack();
     let elemento;
-    for(i=0;i<stack.size()+5;i++){
+    for(i=0;i<stack03.size();i++){
        elemento = stack.pop()
        new_camino.push(elemento)
     }

@@ -52,7 +52,7 @@ let maneja_pila = function (stack,n) {
     return new_array
 }
 
-console.log(maneja_pila(stack01,4));
+console.log(maneja_pila(stack01,6));
 
 
 
