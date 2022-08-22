@@ -59,12 +59,13 @@ class Stack {
    } 
    
 
-let aux_volteado = retirar_contenedor_pos(stack04,5);
+let aux_volteado = retirar_contenedor_pos(stack04,7);
 console.log(aux_volteado);
+console.log(aux_volteado.size());
 
 function voltear_aux (stack) {
     let aux_corregido = new Stack()
-    for(i=0;i<stack.size()+5;i++){
+    for(i=0;i<=aux_volteado.size()+3;i++){
         aux_corregido.push(stack.pop())
     }
 
@@ -73,4 +74,6 @@ function voltear_aux (stack) {
 
 
 console.log(stack04);
-console.log(voltear_aux(aux_volteado));
+
+let aux_corregido = voltear_aux(aux_volteado);
+console.log(aux_corregido);
