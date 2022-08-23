@@ -41,9 +41,26 @@ class LinkedList {
 }
     search(data){
 
+        let current = this.head
+
+        while(!(current == null || current.data == data)){
+            current = current.next
     }
+    return current
+}
 
     print(){
+        let res = ""
+        let current = this.head
+        while(true){
+            if(current == null){
+                break
+            }
+            res += `${current.data} ->`
+            current = current.next
+        }
+
+        return res += 'null'
     }
 }
 
@@ -59,5 +76,11 @@ ll.insert(4);
 
 ll.delete(3);
 
+
 console.log(ll);
 
+
+console.log(ll.search(2));
+
+
+console.log(ll.print())
