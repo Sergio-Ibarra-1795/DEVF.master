@@ -94,6 +94,8 @@ ll.search("Datos V")
 
 let ll2 = new LinkedList()
 
+console.log(ll2)
+
 ll2.insert(1)
 ll2.insert(2)
 ll2.insert(3)
@@ -101,3 +103,5 @@ ll2.insert(4)
 ll2.insert(5)
 
 ll2.delete(3)
+
+console.log(ll2)
