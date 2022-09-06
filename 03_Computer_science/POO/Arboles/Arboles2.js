@@ -36,6 +36,32 @@ class BinarySearchTree {
            
         } 
     }
+
+    preorderTransversal() {
+        let stack = new Stack() 
+        let result = []
+        let current = null
+        
+        stack.push(this.root)
+    
+        while(stack.size() !== 0) {
+            current = stack.pop() // 26
+
+            // ----- Esto cambia en los ejercicios :) 
+            result.push(current.data)
+            //------------------------
+            
+            if(current.right != null) {
+                stack.push(current.right)
+            }
+
+            if(current.left != null) {
+                stack.push(current.left)
+            }
+        }
+        return result
+    } // [26,14,6,19,55,54,47,30,29,53,84,58,99,87,85]
+    
 }
 
 
