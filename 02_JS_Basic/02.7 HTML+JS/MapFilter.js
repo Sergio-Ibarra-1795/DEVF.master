@@ -33,7 +33,6 @@ console.log(NumerosAlCuadrado);
 
 //FILTER METHOD (Para filtrar solo píña, pera y manzana)
 
-
 const callbacck3 =function(fruta){
     let esValido;
     switch(fruta){
