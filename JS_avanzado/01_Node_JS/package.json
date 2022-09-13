@@ -1,0 +1,16 @@
+{
+  "name": "01_node_js",
+  "version": "1.0.0",
+  "description": "\"\"\u001b[Dmi primer npm y node.js\"",
+  "main": "01_Node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon 01_Ne.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "nodemon": "^2.0.19"
+  }
+}
