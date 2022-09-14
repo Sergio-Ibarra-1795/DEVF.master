@@ -1,3 +1,5 @@
+import fetch from "node-fetch"
+
 console.log('Esta es la clase de asincronicidad')
 //codigo sincrono 
 console.log('1')
@@ -69,3 +71,54 @@ const ejemploMap = (e,i,a) =>{
 
 var resultdoArreglo = arreglo.map(ejemploMap)
 console.log(resultdoArreglo)
+
+//Ejemplo de filter 
+
+const sueldos = [
+    {
+        oficio: 'plomero',
+        sueldo: 10000
+    },
+
+    {
+        programador: 'plomero',
+        sueldo: 25000
+
+    },
+
+    {
+        contador: 'plomero',
+        sueldo: 15000
+    },
+
+    {
+        becario: 'plomero',
+        sueldo: 5000
+    },
+]
+
+let resultadoFilter = sueldos.filter((elemento,indice,arreglo)=>{
+    return elemento.sueldo >=15000
+})
+
+console.log(resultadoFilter)
+
+
+//Set time out como ejemplo de asyncronicidad 
+
+console.log('UNO')
+setTimeout(function(){console.log('DOS')},5)
+console.log('TRES')
+
+
+// Consulta a API es un proceso asyncrono (En general a cualquier servidor)
+
+
+async function ejemploFetch(){
+    var respuestaFetch = await fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+    var respuestajson = await respuestaFetch.json()
+    
+    console.log(respuestajson)
+}
+
+ejemploFetch()
