@@ -120,5 +120,4 @@ async function ejemploFetch(){
     
     console.log(respuestajson)
 }
-
 ejemploFetch()
