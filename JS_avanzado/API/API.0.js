@@ -5,7 +5,7 @@
 // 1) Traer a request 
 const request = require('request');
 
-// 2) Crear URI (QUE TOERNE EL ENDPPINT)
+// 2) Crear URI (QUE TIENE EL ENDPPINT)
 const URI = 'https://pokeapi.co/api/v2/pokemon/'
 
 // 2) Implementar a request (Crear una funcion que piuda el nombre y devuelva tipo)
