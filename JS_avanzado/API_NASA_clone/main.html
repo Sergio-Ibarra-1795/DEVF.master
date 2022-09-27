@@ -4,34 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <title>API NASA visualization</title>
-    <script src="./Api_nasa.js"></script>
+    <title>Nasa</title>
 </head>
-
 <body>
-
-    <div class="containere-fluid continer pt3">
-
-        <h1 class="fw-bold">Aplicación que conmsume API de la NASA </h1>
-        <form> 
+	<div class="container-fluid container pt-3">
+        <h1 class="fw-bold">Aplicacion que consume API de la NASA</h1>
+        <form>
             <div class="row">
-
                 <div class="col">
-                    <label>Selecciona el robot</label>
+                    <label >Selecciona el Robot</label>
                     <select class="custom-select mr-sm-2" name="" id="rover">
 
                         <option value="curiosity">Curiosity</option>
                         <option value="opportunity">Opportunity</option>
                         <option value="spirit">Spirit</option>
+
                     </select>
+                    
                 </div>
-
-
-
                 <div class="col">
-                    <label>Selecciona la camara</label>
+                    <label >Selecciona la camara</label>
                     <select class="custom-select mr-sm-2" name="" id="sensor">
 
                         <option value="FHAZ">Front Hazard Avoidance Camera</option>
@@ -43,32 +38,28 @@
                         <option value="NAVCAM">Navigation Camera</option>
                         <option value="PANCAM">Panoramic Camera</option>
                         <option value="MINITES">Miniature Thermal Emission Spectrometer (Mini-TES)</option>
+
                     </select>
                 </div>
-
-
-                <div  class="col">
-                    <label>Introduce el dia solar</label>
-                    <input id="diasolar" type="number">
+                <div class="col">
+                    <label for="">Introduce tu dia solar</label>
+                    <input type="number" id="diasolar">
                 </div>
-
                 <div class="col">
                     <button type="button" onclick="traerfoto()">Hacer consulta</button>
                 </div>
 
 
             </div>
+
+
         </form>
+        <div class="row mt-4" id="contenedorFoto">
+
+        </div>
 
     </div>
 
 
-    <div clas="row mt-4" id="contenedorFoto">
-        
-    </div>
 
 
-</body>
-
-
-</html>
