@@ -1,0 +1,17 @@
+{
+  "name": "promesas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Promesas.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node Promesas.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.2.10"
+  },
+  "type":"module"
+}
