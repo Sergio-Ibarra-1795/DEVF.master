@@ -64,28 +64,32 @@ catch(error){
 funcionAsync()
 
 
-
 //Usando la API LIBRARY
-const urlAuthor = "https://openlibrary.org/srach.json?author=asimov"
+
+const urlAuthor = "http://openlibrary.org/search.json?author=asimov"
 
 async function queryAuthor(urlA){
-    let urllibro = "https://openlibrary.org/api/books?bibkeys=ISBN:"
+    let urlLibro = "https://openlibrary.org/api/books?bibkeys=ISBN:"
     const response = await fetch(urlA)
-    const responseJson = response.json()
+    const responsejson = response.json()
+    let arregloids = responsejson.docs[0].isbn
     let arreglolibros = []
     let arregloPromesas = [] //Esto es para ir guardando las promesasd y evitar que truene por el ciclo for de fetchs 
-    let arregloids = responseJson.docs[0].isbn
-    arregloids.forEach(async(element)=>{
-        let promesa = await fetch(urllibro + element).then((r)=>r)
-        arregloPromesas.push(promesa)
+    
+    arregloids.forEach(async(element) => {
+        let promesa =  fetch(urlLibro+element).then((r)=>r)
+       arregloPromesas.push(promesa)
     });
 
     return new Promise((resolve)=>{
         Promise.all(arregloPromesas).then((proms)=>{
-            proms.forEach((p)=>arreglolibros.push(p))
+            proms.forEach(async(p)=> {
+                    arreglolibros.push(p)
+                 })
         }).then(()=>resolve(arreglolibros))
     })
 }
+
 
 async function ejem(url){
     let respuesta = await queryAuthor(url)
