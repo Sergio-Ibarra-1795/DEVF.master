@@ -11,7 +11,6 @@ const goodReadsCrud = require ('./logica')
 
 
 //* CREAR UN AUTOR
-
 const jsonsend = {
 
     name: "Chikito22",
@@ -23,5 +22,15 @@ const jsonsend = {
     is_alive: true
 }
 
+//goodReadsCrud.createAuthor(jsonsend)
 
-goodReadsCrud.createAuthor(jsonsend)
+
+
+//* PARTIAL_UPDATE OF AN AUTOR
+const jsonpatch = {
+     name: "Chikititou",
+     last_name: "Peraltinha",
+     age: 28.5
+}
+
+goodReadsCrud.patchAuthor(14905,jsonpatch)

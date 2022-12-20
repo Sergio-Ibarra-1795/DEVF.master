@@ -22,7 +22,6 @@ const listAuthors = ( ) => {
 }
 
 
-
 //3 LISTAR A UN AUTOR POR SU ID 
 const getAuthor = (id)=>{
     request.get(URI+id+'/',(error,response,body)=>{
@@ -38,8 +37,7 @@ const getAuthor = (id)=>{
 }
 
 
-//Crteamos un author en la API. Para ello cremos un JSON con la info del author 
-
+//Creamos un author en la API. Para ello cremos un JSON con la info del author 
 
 const createAuthor = (jsonData) =>{
     const objectConfig = {
@@ -59,8 +57,31 @@ const createAuthor = (jsonData) =>{
 }
 
 
+//Updating an existing-author (partial_update)
+const patchAuthor = (id,jsonData) =>{
+    const objectConfig = {
+        url:URI + id +'/', //Endpoint para update el autor 
+        form: jsonData //Esta es la data del autor al crear 
+    }
+
+    request.patch(objectConfig,(error,response,body)=>{
+        if(response.statusCode === 200){
+            const patchauthor = JSON.parse(body)
+            console.log("AUTOR UPDATED EXITOSAMENTE: " + "\n", patchauthor)
+        }else{
+            console.log("Autor NO UPDATED exitosamente", response.statusCode , response.statusMessage)
+        }  
+    })
+
+}
+
+
+
+
+
   module.exports = {
     listAuthors,
     getAuthor,
     createAuthor,
+    patchAuthor,
   } 
